@@ -1,0 +1,51 @@
+.container {
+  height: 100vh;
+  width: 6%;
+  max-width: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0rem;
+  background-color: black;
+}
+
+.expanded {
+  width: 100%;
+  max-width: none;
+}
+
+.logo {
+  width: 45%;
+  max-width: 5rem;
+}
+
+.menu {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.item > svg {
+  fill: antiquewhite;
+
+  width: 3rem;
+}
+
+@media (max-width: 768px) {
+  
+
+  .logo {
+    display: none; /* Hide logo for smaller screens */
+  }
+
+  .menu {
+    margin-top: -1rem; /* Reduce margin-top for smaller screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .expanded {
+   width:6%
+  }
+}

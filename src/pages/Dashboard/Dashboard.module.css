@@ -1,0 +1,103 @@
+.container {
+  width: 100%;
+  max-width: 130rem;
+  padding: 0rem 4rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allow container to wrap when screen size decreases */
+}
+
+.dashboard {
+  width: 70%; /* Original width for dashboard */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dashboardHead {
+  width: 100%; /* Take full width for dashboard head */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboardHead > .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head > :nth-child(1) {
+  font-size: 1.5rem;
+  font-family: 500;
+}
+
+.dashboardHead > select {
+  border: none;
+  background-color: var(--orange-gradient);
+  padding: 10px;
+  font-weight: 500;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card {
+  width: calc(50% - 0.5rem); /* Two cards per row, with gap */
+}
+
+.cardHead > :nth-child(1) {
+  color: aliceblue;
+}
+
+.cardHead > :nth-child(2) {
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  color: var(--green);
+}
+
+.cardAmount > :nth-child(1) {
+  font-size: 0.9rem;
+  color: aliceblue;
+  position: relative;
+}
+
+.cardAmount > :nth-child(2) {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0rem 2rem; /* Adjust padding for smaller screens */
+  }
+
+  .dashboard {
+    width: 100%; /* Take full width for dashboard on smaller screens */
+  }
+
+  .dashboardHead {
+    width: 100%; /* Take full width for dashboard head on smaller screens */
+  }
+
+  .cards {
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    justify-content: center; /* Center cards on smaller screens */
+  }
+
+  .card {
+    width: calc(100% - 1rem); /* Take full width with gap */
+    margin-bottom: 1rem; /* Add bottom margin for spacing */
+  }
+
+  .dashboard > .Orders {
+    width: 100%; /* Take full width for orders on smaller screens */
+  }
+}

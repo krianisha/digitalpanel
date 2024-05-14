@@ -1,0 +1,104 @@
+.board-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.board-container > :nth-child(1) {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.react-kanban-board {
+  color: white;
+}
+
+.react-kanban-board > :nth-child(1) {
+  width: 100%;
+}
+
+.react-kanban-board > :nth-child(1) > div {
+  width: 24%;
+}
+
+.react-kanban-column {
+  background-color: var(--transparent-black);
+  border-radius: 8px;
+}
+
+.react-kanban-column > :nth-child(2) > div > div {
+  width: 100%;
+}
+
+/* Inside the container within the kanban */
+.kanban-card { 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--transparent-black);
+  padding: 1rem;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
+.kanban-card > :nth-child(1) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.column-header {
+  width: 91%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -1rem;
+  padding: 0px 8px;
+}
+
+.column-header > svg {
+  cursor: pointer;
+}
+
+/* Media Query for smaller screens */
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .board-container {
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .react-kanban-board > :nth-child(1) > div {
+    width: 100%; /* Adjust width for smaller screens */
+    min-width: 300px; /* Set a minimum width for the Trello box */
+  }
+
+  .react-kanban-column > :nth-child(2) > div > div {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+
+  .kanban-card {
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+    margin-top: 1rem; /* Adjust margin-top for smaller screens */
+    width: 23rem;
+  }
+  .react-kanban-board{
+    margin-right: 13rem;
+  }
+  .board-container > :nth-child(1) {
+  margin-left: -14rem;
+  }
+  .column-header > svg {
+    margin-right: 7rem;
+
+  }
+
+}

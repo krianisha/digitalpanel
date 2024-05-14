@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  overflow-y: auto; /* Enable vertical scrolling */
+  scroll-behavior: smooth; /* Enable smooth scrolling inside the container */
+}
+
+.container > div {
+  margin-top: 2rem;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.input {
+  color: white;
+  font: inherit;
+  margin-top: 12px;
+  display: block;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgb(98, 98, 98);
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  resize: none;
+}
+
+.saveButton {
+  width: 6rem;
+  align-self: flex-end;
+  margin-top: 1.5rem;
+  background: var(--orange-gradient);
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.saveButton:disabled {
+  background: grey;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px; /* Add padding to the container */
+  }
+}

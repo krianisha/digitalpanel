@@ -1,0 +1,15 @@
+/* Normal table styles */
+.material-react-table {
+  width: 100%; /* Ensure table takes full width */
+  table-layout: auto; /* Allow table cells to adjust size based on content */
+  font-size: 14px; /* Default font size */
+}
+
+/* Adjust table styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  .material-react-table {
+    font-size: 12px; /* Reduce font size for smaller screens */
+    width: auto; /* Allow table to shrink to fit content */
+    max-width: 100%; /* Set maximum width to 100% */
+  }
+}

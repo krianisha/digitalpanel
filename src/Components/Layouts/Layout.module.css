@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  
+}
+
+.dashboard {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+
+.topBaseGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20rem;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.topBaseGradient > :nth-child(2) {
+  left: 40%;
+}
+
+.topBaseGradient > :nth-child(3) {
+  right: 0;
+}
+
+.header {
+  display: flex;
+  padding: 2rem 4rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header > :nth-child(1) {
+  font-size: 1.2rem;
+}
+
+.searchBar {
+  background-color: rgba(255, 255, 255, 0.597);
+  width: 30%;
+  max-width: 25rem;
+  padding: 1rem 0rem;
+  border-radius: 10px;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  border: 2px solid rgb(25, 25, 57);
+  justify-content: center;
+  gap: 8px;
+}
+
+.searchBar > input {
+  background: transparent;
+  color: rgb(7, 6, 6);
+  outline: none;
+  padding: 0;
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile > img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+  border: 2px solid brown;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.details > :nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.content {
+  margin: auto;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-top: -4rem;
+}
+
+.content > div {
+  width: 100%;
+  min-width: 75vh;
+}
+
+.changeImageButton {
+  border-radius: 5px;
+  color: white;
+  background-color: brown;
+  margin-left: 5rem; /* Adjust margin from the left */
+  margin-right: auto; /* Move to the left */
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .profile {
+    flex-direction: column; /* Change flex direction to column for smaller screens */
+    align-items: center; /* Align items to the center for smaller screens */
+  }
+
+  .profile > img {
+    margin-bottom: 1rem; /* Add bottom margin for spacing on smaller screens */
+    width: 8rem;
+    height: 7rem;
+    border-radius: 1rem;
+  }
+
+  .changeImageButton {
+    margin-left: 4rem; /* Move to the right */
+    margin-right: 0; /* Reset right margin for smaller screens */
+    margin-top: 1rem; /* Add top margin for spacing on smaller screens */
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  
+  .header > :nth-child(1){
+  font-size: 1.2rem;
+  margin-left: 2rem;
+}
+}
